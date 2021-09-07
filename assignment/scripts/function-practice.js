@@ -37,9 +37,10 @@ console.log(
 //    or greater than zero, and false otherwise
 function isPositive(number) {
   if (number > 0) {
-    return;
+    return true;
+  } else {
+    return false;
   }
-  return;
 }
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
@@ -49,12 +50,27 @@ console.log("isPositive - should say false", isPositive(-3));
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
-function getLast(array) {}
-
+function getLast(array) {
+  return array[array.length - 1];
+}
+let array1 = ["red", "blue", "green"];
+let array2 = [];
+console.log('getLast - should say "green" -', getLast(array1));
+console.log('getLast - should say "undefined" -', getLast(array2));
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find(value, array) {}
+function find(value, array) {
+  let found = false;
+  for (let i = 0; i < array.length && !found; i++) {
+    if (value === array[i]) {
+      found = true;
+    }
+  }
+  return found;
+}
+console.log("find - should say true -", find("green", array1));
+console.log("find - should say false -", find("orange", array1));
 
 // ----------------------
 // Stretch Goals
