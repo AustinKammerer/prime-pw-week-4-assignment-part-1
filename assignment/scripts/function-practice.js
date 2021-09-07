@@ -128,3 +128,11 @@ console.log(
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+//
+// Create a function that takes numbers b and m as arguments and returns the derivative of the function f(x) = x^b with respect to x evaluated at x = m, where b and m are constants.
+function derivative(b, m) {
+  return b * m ** (b - 1);
+}
+console.log("derivative - should return 12 -", derivative(3, 2));
+console.log("derivative - should return -108 -", derivative(4, -3));
+console.log("derivative - should return 1171280 -", derivative(5, 22));
